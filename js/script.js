@@ -1,18 +1,12 @@
-/*
-fine then lets focus on our clock
-yes
-can you see the live server?
-Yes I can see the live server
-Come to the function time_right_now
-*/
-let current_time = new Date();
+
 let current_date = document.querySelector(`#date`);
 let current_day = document.querySelector(`#day`);
 let clock = document.querySelector(`#clock`);
 
-// I have an idea
-// uhuh Come below
-function date_right_now(date){
+
+function date_right_now(){
+    let date = new Date();
+
     let date_today = date.getDate()
     let month_today = date.getMonth() + 1;
     let year_today = date.getFullYear();
@@ -25,15 +19,22 @@ function date_right_now(date){
 }
 
 
-function day_right_now(date){
+function day_right_now(){
+
+    let date = new Date();
+
     let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     let today = week[date.getDay()];
+
     current_day.innerHTML =`
         <h2>${today}</h2>
     `
 }
 // freeze or thinking? I'm thinking
-function time_right_now(time){
+function time_right_now(){
+
+    let time = new Date();
+
     // hours
     let hours = time.getHours() % 12;
     hours = hours ? hours : 12; 
@@ -57,11 +58,16 @@ function padding(value) {
     return value < 10 ? "0" + value : value;
 }
 
+function main() {
+    date_right_now();
+    day_right_now();
+    setInterval(() => time_right_now(),1000);
+}
 
-setInterval(() => time_right_now(current_time),1000);
+main();
 
-date_right_now(current_time);
-day_right_now(current_time);
+
+
 
 
 /*
