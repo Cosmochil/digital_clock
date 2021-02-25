@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digital Clock</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
     <script async src="./js/script.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Digital Clock</h1>
+      <h1>Digital Clock</h1>
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox"/>
+          <div class="slider round"></div>
+        </label>
+        <em>Enable Dark Mode!</em>
+       
+      </div>
     </header>
-    <div id="not-clock">
+    <div id="digital_watch">
+      <div id="not-clock">
         <span>HI, THE TIME IS</span>
+      </div>
+      <div id="clock"></div>
+      <div id="day"></div>
+      <div id="date"></div>
     </div>
-    <div id="clock"></div>
-    <div id="day"></div>
-    <div id="date"></div>
-    
-</body>
+  </body>
 </html>
-<!-- 
-    okay now lets start with the js
---> 
+
